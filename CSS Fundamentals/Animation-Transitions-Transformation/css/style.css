@@ -1,0 +1,46 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0;
+    background-color: #5F8B4C;
+}
+
+.man{ height: 250px;}
+.dog{ height: 115px;}
+.cat{ height: 70px;}
+.mouse{ height: 40px;}
+
+.running-img {
+    width: 1200px;
+    height: 600px;
+    background-image: url('../images/bg.jpg');
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    background-repeat: no-repeat;
+    background-size: 1200px 600px;  
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    /* overflow: visible; */
+
+}
+.man, .dog, .cat, .mouse{
+    margin-bottom: 110px;
+    padding-right: 80px;
+    animation-name: runApp;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+}
+
+@keyframes runApp {
+    0% {
+        transform: translateX(-900px);
+    }
+    100% {
+        transform: translateX(1250px); 
+    }
+}
+

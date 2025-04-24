@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinators</title>
+    <style>
+        /* Direct child */
+        div > p {
+            color: red;
+        }
+
+        /* Any descendant */
+        div p {
+            font-weight: bold;
+        }
+
+        /* Adjacent sibling */
+        div + p {
+            background-color: lightblue;
+        }
+
+        /* General sibling */
+        div ~ p {
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <p>Direct child of div and descendant (red and bold)</p>
+        <section>
+            <p>Nested inside section inside div. GrandChild and descendant (bold only)</p>
+        </section>
+    </div>
+
+    <p>Adjacent sibling to div (light blue + green border)</p>
+    <p>General sibling to div (green border only)</p>
+    
+</body>
+</html>

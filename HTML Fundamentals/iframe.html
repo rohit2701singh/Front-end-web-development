@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe</title>
+</head>
+<body>
+
+    <h2>iframe tag</h2>
+    <p>
+        The HTML iframe tag specifies an inline frame. An inline frame is used to embed 
+        another document within the current HTML document.
+    </p>
+        <iframe src="https://iframetester.com/" frameborder="5" width="600" height="200"></iframe>
+
+
+    <h3>Another Example to use iframe with 'a' tag</h3>
+    <p>
+        An iframe can be used as the target frame for a link.
+        The  <mark>target</mark> attribute of the link must refer to the <mark>name</mark> attribute of the iframe:
+    </p>
+    <a href="https://iframetester.com/" target="iframe_a">Iframe testing site</a>
+    <a href="https://www.seoptimer.com/iframe-test" target="iframe_a">Example site</a><br>
+    <iframe src="" name="iframe_a" frameborder="5" width="500" height="200"></iframe>
+    
+    <h3>Add you video in iframe</h3>
+    <p>copy embed from youtube video</p>
+    <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/0J8pg8KSirI?si=Hqf3GMIcAgNbQ2uB" 
+        title="YouTube video player" 
+        frameborder="3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
+    
+</body>
+</html>

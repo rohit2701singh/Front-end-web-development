@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Property</title>
+
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            height: 1000px;
+            background-color: rgba(95, 158, 160, 0.729);
+        }
+        .navbar{
+            background-color: red;
+            color: white;
+            height: 50px;
+            padding: 5px;
+            font-family: cursive;
+        }
+        div h2{
+            display: inline-block;
+            margin:8px 10px;
+        }
+        div li{
+            display: inline;
+            padding-right: 30px;
+            font-size: 18px;
+        
+        }
+        ul{
+            display: inline;
+            float: right;
+        }
+        li:hover{
+            background-color:black;
+            cursor: pointer;
+        }
+
+        img{
+            display: block;
+            margin: auto;
+            height:400px;
+            width: 80%;
+        }
+
+        .box{
+            border: 1px solid black;
+            display: inline-block;
+            width: 600px;
+            margin: auto;
+            margin-top: 40px;
+            padding: 10px;
+        }
+
+        #short{
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Display Property</h1>
+    <p>The display property is used to specify how an element is shown on a web page.</p>
+
+    <p>Every HTML element has a default display value, depending on what type of element it is.
+         The default display value for most elements is block or inline.
+    </p>
+    <p> <b>The display property is used to change the default display behavior of HTML elements.
+            Setting the display property of an element only changes how the element is displayed, NOT what kind of element it is.
+        </b>
+    </p>
+    <p>
+        display property has many values:
+        <b>ex: inline, block, inline-block, flex, grid, none</b>
+    </p>
+    <hr>
+
+    <div class="navbar">
+        <h2>Swiggy foody</h2>
+        <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>Products</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <img src="images/food.png" alt="">
+
+    <div class="box">
+        <h1>Title1</h1>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum molestias ipsam earum eligendi odit reiciendis,
+             sequi velit laboriosam inventore ipsum illum ad reprehenderit! Beatae eveniet aperiam voluptas vero quia debitis.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum molestias ipsam earum eligendi odit reiciendis,
+             sequi velit laboriosam inventore ipsum illum ad reprehenderit! Beatae eveniet aperiam voluptas vero quia debitis.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum molestias ipsam earum eligendi odit reiciendis,
+             sequi velit laboriosam inventore ipsum illum ad reprehenderit! Beatae eveniet aperiam voluptas vero quia debitis.
+        </p>
+    </div>
+
+    <div class="box">
+        <h1>Title2</h1>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum molestias ipsam earum eligendi odit reiciendis,
+             sequi velit laboriosam inventore ipsum illum ad reprehenderit! Beatae eveniet aperiam voluptas vero quia debitis.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum molestias ipsam earum eligendi odit reiciendis,
+             sequi velit laboriosam inventore ipsum illum ad reprehenderit! Beatae eveniet aperiam voluptas vero quia debitis.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum molestias ipsam earum eligendi odit reiciendis,
+             sequi velit laboriosam inventore ipsum illum ad reprehenderit! Beatae eveniet aperiam voluptas vero quia debitis.
+        </p>
+    </div>
+
+    <p id="short">This is a short para</p>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model and Div Overflow</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .box{
+            border: 1px solid black;
+            padding: 20px;
+            margin: 20px;
+            width: 1000px;
+            height: 200px;
+            /*overflow: hidden;*/
+            /*overflow: scroll;*/
+            overflow-y: auto;
+        }
+        ul{
+            padding-left: 40px;
+        }
+        h1{
+            margin: 10px;
+            padding-left: 20px;
+        }
+        img{
+            margin: 20px;
+            height: 220px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Box Model and Overflow</h1>
+    <div class="box">
+        <h2>Title #1</h2>
+        <h3>The CSS BOX MODEL: is essentially a box that wraps around every HTML element. It consists of: content, padding, borders and margins.</h3><br>
+        <ul>
+            <li>Content - The content of the box, where text and images appear</li>
+            <li>Padding - Clears an area around the content. The padding is transparent</li>
+            <li>Border - A border that goes around the padding and content</li>
+            <li>Margin - Clears an area outside the border. The margin is transparent</li>
+        </ul>
+        <img src="images/css-box-model.png" alt="box model img">
+    </div>
+
+    <div class="box">
+        <h2>Title #2</h2>
+        <h3>CSS OVERFLOW: property controls what happens to content that is too big to fit into an area.
+            It specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in specified height.
+        </h3><br>
+        <ul>
+            <li>Hidden: The overflow is clipped, and the rest of the content will be invisible</li>
+            <li>Visible: Default. The overflow is not clipped.</li>
+            <li>Scroll: The overflow is clipped, and a scrollbar is added to see the rest of the content</li>
+            <li>Auto: it adds scrollbars only when necessary</li>
+        </ul>
+        <br><hr>
+        
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse corrupti perspiciatis rerum excepturi quibusdam adipisci 
+            dolorem natus facilis ullam voluptates assumenda voluptas, autem molestias itaque, consectetur omnis cum dolor. Maiores.
+            Repudiandae quasi consequuntur aut eveniet ratione assumenda dolorem necessitatibus velit facilis ipsa sed harum nam 
+            nostrum, eos laboriosam optio hit qui? Quod pariatur sint, sed quam aspernatur perspiciatis modi delectus.
+            Ipsam, culpa repellendus labore exercitationem a aliquam, minima corporis porro deleniti enim, vitae dolorum dignissimo
+            magni optio assumenda. Dolor incidunt deleniti possimus voluptates dolore ab laudantium quidem inventore assumenda! Vitae.
+        </p>
+    </div>
+
+    <div class="box">
+        <h2>Title #3</h2>
+        <h3>This div showing add scrollbar only when it's necessary.</h3>
+        <p>If we set overflow to auto then it adds scrollbars only when necessary</p>
+        <p>The overflow-x and overflow-y properties specifies whether to change the overflow of 
+            content just horizontally or vertically (or both)
+        </p>
+        <pre>
+            div {
+                overflow-x: hidden; /* Hide horizontal scrollbar */
+                overflow-y: scroll; /* Add vertical scrollbar */
+              }
+        </pre>
+    </div>
+</body>
+</html>

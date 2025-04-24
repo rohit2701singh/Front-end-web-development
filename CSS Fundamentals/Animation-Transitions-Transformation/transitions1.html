@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transition Basics</title>
+
+    <style>
+        body{
+            background-color: white;
+        }
+        .box{
+            background-color: #AE445A;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            opacity: 1;
+            transition-property: all;
+            transition-duration: 3s;
+            /*transition-property: border-radius, opacity;*/  /* name of property where you want to apply */
+            /*transition-duration: 3s, 5s;
+            transition-delay: 1*/
+            
+        }
+        .box:hover{
+            background-color: #005B41;
+            width: 200px;
+            height: 200px;
+            top: 50px;
+            left: 50px;
+            border-radius: 50%;
+            opacity: 0.8;
+            cursor: pointer;
+        }
+        .box-without-transition{
+            background-color: green;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            margin-top: 50px;           
+        }
+        .box-without-transition:hover{
+            background-color: crimson;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Css Transition</h1>
+    <p>
+        CSS transitions allows you to change property values smoothly, over a given duration.
+    </p>
+    <p>
+        for example if I want to change the background color of a box when I hover over it,
+        then without a transition, it will be a sudden change from one color to another. 
+        But with a transition, it will be a smooth and gradual change from one color to another within a specified time. 
+    </p>
+    <p>
+        Transitions enable you to define the transition between two states of an element. 
+        Different states may be defined using pseudo-classes like :hover or :active or dynamically set using JavaScript
+    </p>
+    <p>
+        You can apply transition to any CSS property that has intermediate values
+    </p>
+    <pre>
+        transition
+        transition-delay
+        transition-duration
+        transition-property
+        transition-timing-function
+    </pre>
+
+    <div class="box"></div>
+    <div class="box-without-transition"></div>
+    
+</body>
+</html>

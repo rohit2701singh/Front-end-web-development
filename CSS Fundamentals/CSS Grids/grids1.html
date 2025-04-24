@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grids</title>
+    
+    <style>
+        .container{
+            background-color: black;
+            display: grid;
+            /*grid-template-columns: 1fr 1fr 1fr;*/
+            /*grid-template-columns: repeat(3, 1fr 2fr);*/
+            /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 10px;
+            row-gap: 10px;
+            /*grid-auto-rows: minmax(100px, auto);
+            justify-items: stretch;
+            height: 800px;
+            align-items: center;*/
+        }
+        .box{
+            background-color: aquamarine;
+            padding: 20px;
+            font-size: 30px;
+        }
+        .nested{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 5px;
+            column-gap: 5px;
+        }
+        .inner-box{
+            height: 100px;
+            border: 2px solid blueviolet;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">
+            2
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem adipisci totam debitis 
+            </p>
+        </div>
+        <div class="box nested">
+            <div class="inner-box"></div>
+            <div class="inner-box"></div>
+            <div class="inner-box"></div>
+            <div class="inner-box"></div>
+            <div class="inner-box"></div>
+            <div class="inner-box"></div>
+            <div class="inner-box"></div>
+            <div class="inner-box"></div>
+            <div class="inner-box"></div>
+        </div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+    
+</body>
+</html>

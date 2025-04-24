@@ -1,0 +1,128 @@
+.nav-bar {
+  background-color: green;
+  color: white;
+  font-size: 20px;
+  margin-top: 30px;
+}
+.nav-bar ul {
+  margin: 0;
+  padding: 0;
+}
+.nav-bar ul li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  display: block;
+  background-color: red;
+}
+
+.footer {
+  width: 100%;
+  height: 50px;
+  display: block;
+  background-color: skyblue;
+}
+
+body {
+  background-color: #ddd;
+  font-family: cursive;
+  height: 2000px;
+}
+
+.class-a {
+  color: red;
+  font-size: 20px;
+}
+
+.class-b {
+  color: green;
+}
+
+nav {
+  background-color: blue;
+  color: white;
+  font-size: 20px;
+  margin-top: 10px;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.grand-parent {
+  background-color: aqua;
+  margin-top: 10px;
+  padding: 10px;
+}
+.grand-parent .parent {
+  background-color: brown;
+  padding: 15px;
+}
+.grand-parent .parent .child {
+  background-color: yellow;
+  padding: 20px;
+}
+
+.gp {
+  background-color: cadetblue;
+  margin-top: 30px;
+  padding: 20px;
+}
+.gp-pr {
+  background-color: palevioletred;
+  padding: 15px;
+}
+.gp-pr-ch {
+  background-color: lightslategrey;
+  padding: 10px;
+}
+.gp-pr-ch .heading {
+  background-color: white;
+  text-align: center;
+}
+
+.danger {
+  padding: 5px;
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid blue;
+  background-color: greenyellow;
+}
+
+.success {
+  padding: 5px;
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid blue;
+  color: green;
+  padding-left: 20px;
+  background-color: greenyellow;
+}
+
+.button-basic, .button-submit, .button-report {
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  background-color: chocolate;
+}
+
+.button-report {
+  background-color: red;
+}
+
+.button-submit {
+  background-color: green;
+  color: white;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,45 @@
+template literal(template string): `string text ${expression} string text` (backticks ` (below esc button) )
+variables: let and const
+print in console: console.log(something)
+take user input: prompt("something.....")
+
+----datatypes ----
+
+primitive: string, number(int, float), boolean, Null, undefined, symbol
+non primitive: array, object literal, dates, functions, custom object
+
+------operators------
+
+relational: ==(no type check), ===(strict, type check), !=, !==, <=, >=, ++ (increment)
+logical: && (and), || (or), ! (not)
+
+-------conditions------
+
+if (condition1) {
+  //  block of code to be executed if condition1 is true
+} else if (condition2) {
+  //  block of code to be executed if the condition1 is false and condition2 is true
+} else {
+  //  block of code to be executed if the condition1 is false and condition2 is false
+}
+
+-----arrays--------
+
+let colors = ["red", "blue", "green", "black"];
+colors[8] = "brown"  //-- length = 9, added 3 empty string in between then a new element
+
+## array methods
+
+push - add to end
+pop - remove from end
+shift - remove from start 
+unshift - add to start
+concat - merge arrays
+includes - lokk for a value
+indexOf - find index of element
+join - create string from array
+reverse - reverse an array  // changes the original array
+slice - copies a portion on an array
+splice - removes/replaces element 
+sort - sorts an array, default sort is ascending, converts each element into string, then compare their utf-16 values before sortingv🤢
+

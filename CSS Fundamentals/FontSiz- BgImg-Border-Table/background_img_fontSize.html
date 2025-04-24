@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image CSS Units and font size</title>
+
+    <!-- 
+        background-image: url("https://picsum.photos/300");
+        background-size: cover; (single pic stretch)
+        background-attachment property specifies whether the background image should scroll or be fixed
+        background-image property repeats an image both horizontally and vertically.
+            repeated only horizontally (background-repeat: repeat-x;)
+            repeat only vertically, set background-repeat: repeat-y;
+    -->
+
+    <style>
+        body{
+            /* background-image: url("/images/river.png");
+            background-repeat: no-repeat;
+            background-position: right center ;
+            background-attachment: fixed; */
+
+            /* background: url('/images/river.png') no-repeat right center fixed; */
+            
+            /* '/images/river.png' is an absolute path which means go to the root directory of the website,
+                then into the images folder, and load the file river.png */
+            
+             background: url('images/river.png') no-repeat right center fixed;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Background Image</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis reprehenderit maiores sit quo architecto. 
+        Suscipit numquaati ipsum voluptatum id excepturi illum officia, quos maiores a
+        Quos, modi cum. Perspiciatis eligendi repellat reprehenderit nulla aliquid facilis, pariatur nostrum quibusdam delectus 
+        Earum, ullam. Similique, veritatis, ipsa earum laudantium natus beatae voluptatem minus repudiandae blanditiis, nemo 
+        Accusamus mollitia perspiciatis autem et eius quibusdam quam iusto delectus magni rem. Adipisci rerum 
+        Accusantium, eum. Exercitationem cupiditate mollitia odio enim reiciendis similique eaque itaque corporis dicta sint aliquid 
+        Maiores delectus ex quasi ullam asperiores blanditiis maxime pariatur, fugiat, aut facere fugit odit obcaecati
+        Error, ducimus rem excepturi vnecessitatibus, doloribus labore explicabo cupiditate quos, ipsa, 
+        Perferendis corrupti voluptatum nemo soluta omnis debitis dolores dolore sequi ipsa vel. Sint architecto perferendis, 
+    </p>
+    <hr>
+    <h1 style="font-family:cursive; text-decoration:underline">
+        CSS Units
+    </h1>
+   
+    <!--
+        css units
+        length properties
+        width: 500px;
+        margin-top: -10px;
+
+        width, height, max-width, margin, padding, font-size
+        1. absolute units(px, pt, cm, mm)---1px = 1/96th inch
+        2. relative units(em, rem, percentage)
+    -->
+
+    <p>This is my original size of a paragraph</p>
+    <p style="font-size: 16px;">This is my para font size set to 16px..no difference</p>
+    
+    <p style="font-size: 25px;"> 
+        I'm a sample paragraph with Inline css 25px size
+    </p>
+
+    <p style="font-size: 200%;"> 
+        I'm a sample paragraph using Inline css with font size 200% of 16px(i.e 32px)
+    </p>
+
+    <p style="font-size: 3em;"> 
+        I'm a sample paragraph using Inline css with font size 3em of 16px(i.e 48px)
+    </p>
+
+    <!-- 
+        'em' : Relative to the font size of the parent (2em means 2 times the size of the current font)
+        'rem': Relative to font-size of the root element, usually <html>
+    -->
+
+    <div style="font-size: 30px;">
+        The font-size of the parent div element is set to 30px. 
+        <span style="font-size: 2em;">
+            The child span element inside the div element has a font-size of 2em,
+            which equals to 2x30 = 60px
+        </span>
+    </div>
+    <hr>
+
+    <div style="font-size: 32px;">
+        The font-size of this new parant div element is 32px.
+        <span style="font-size:1rem;">
+            The font-size of this first child span is 1rem i.e. 16px, showing that it does not inherit from its parent div font size.
+        </span>
+        <span style="font-size:2em;">
+            The font-size of this second child span is 2em= 64px. It is inheriting font-size from its parent element div.
+        </span>
+    </div>
+
+</body>
+</html>

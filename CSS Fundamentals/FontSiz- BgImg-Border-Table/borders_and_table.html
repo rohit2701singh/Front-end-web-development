@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borders and Table</title>
+
+    <style>
+        #box1{
+            margin: auto;
+            margin-top: 50px;
+            text-align: center;
+            width: 500px;
+            /*border-style: solid;
+            border-color: blueviolet;
+            border-width: 3px;*/
+
+            border: 5px blueviolet solid;
+            border-radius: 40px;
+            box-shadow: 10px 10px 50px rgba(209, 47, 101, 0.629);
+            /*box-shadow: 10px 10px 5px 20px lightblue;*/
+              
+            /*box-shadow: h-offset, v-offset, blur, spread, color*/
+        }
+
+        #container{
+            max-width: 1000px;
+            margin: auto;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Verdana, sans-serif;
+        }
+        table,th,tr,td{
+            border: 2px solid gray;
+        }
+        th{
+            background-color: rgb(54, 144, 54);
+            color: white;
+            height: 50px;
+            font-size: 20px;
+        }
+        tr{
+            height: 40px;
+        }
+        tr:hover{
+            background-color: yellow;
+        }
+        tr:nth-child(odd){
+            background-color:rgba(36, 154, 158, 0.407);
+        }
+        td{
+            padding: 10px;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="box1">
+        <h1>Heading 1</h1>
+        <p style="text-align: justify; padding:5px 30px; padding-bottom:20px">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatem 
+            sit nemo? Et nisi quibusdam labore distinctio itaque veritatis autem debitis sed repellat iste, 
+            ullam vel soluta ratione perferendis unde?  quam beatae a, eligendi neque consectetur nobis ei
+            is, harum necessitatibus blanditiis tempore voluptates aliquid autem obcaecati aliquam officiisre 
+            minima accusamus labore nobis doloribus sint. Qui nihil reprehenderit facere quam porro molestiae 
+        </p>
+    </div>
+
+    <h2 style="text-align: center; margin-top: 80px;">Table CSS Example</h2>
+    <div id="container">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>College</th>
+                <th>Course</th>
+                <th>CGPA</th>
+            </tr>
+            <tr>
+                <td>Rohit Sharma</td>
+                <td>Delhi University</td>
+                <td>Math</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Virat Kohli</td>
+                <td>Kumaun University</td>
+                <td>Science</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Sachin Tandulkar</td>
+                <td>DSB campus</td>
+                <td>Physics</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Mohan Singh</td>
+                <td>Delhi College</td>
+                <td>Chemistry</td>
+                <td>7</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

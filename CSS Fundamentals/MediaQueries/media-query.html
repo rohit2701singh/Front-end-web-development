@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto auto;
+            row-gap: 10px;
+            column-gap: 10px;
+        }
+        .box{
+            border: 1px solid black;
+        }
+        #heading{
+            grid-column-start: 1;
+            grid-column-end: -1;
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        #right_content{
+            font-size: 20px;
+            padding: 20px;
+            text-align: justify;
+        }
+        /* 
+            breakpoints: 
+            Desktop: above 1024px, tablets: 769px to 1023px
+            smartphone: 469px to 768px, small phones: 0px to 468px
+        */
+
+        /* ----Desktop/Laptop----*/
+        @media(min-width: 1024px){
+            body{
+                background-color: #557c6de4;
+                color: white;
+            }
+        }
+
+        /* ----tablets----*/
+        @media(min-width: 769px) and (max-width: 1023px){
+            body{
+                background-color: #e3661dbd;
+                color: white;
+            }
+        }
+
+        /* ----smart phone----*/
+        @media(max-width: 768px){
+            body{
+                background-color: rgba(0, 0, 0, 0.71);
+                color: white;
+            }
+            .container{
+                display: block;
+            }
+            #left_img img{
+                width: 100%;
+                height: auto;
+            }
+            .box{
+                border-color: white;
+            }
+        }
+        /* ----smaller phones----*/
+        @media(max-width: 468px){
+            body{
+                background-color: rgba(148, 23, 152, 0.729);
+                color: white;
+            }
+            #left_img img{
+                display: none;
+            }
+            #right_content{
+                font-size: 18px;
+            }
+            .box{
+                border: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Media Query</h1>
+    <p>
+        Media queries allow you to apply CSS styles depending on a device's media type (such as print vs. screen) 
+        or other features or characteristics such as screen resolution or orientation, aspect ratio, browser viewport
+        width or height, user preferences such as preferring reduced motion, data usage, or transparency.
+    </p>
+    <hr>
+    <div class="container">
+        <div class="box" id="heading">
+            <h2>Indian Premier League</h2>
+        </div>
+
+        <div class="box" id="left_img">
+            <img src="https://img.olympics.com/images/image/private/t_s_16_9_g_auto/t_s_w960/f_auto/primary/dz7fjb9jgoytafvj4atb" alt="ipl image">
+        </div>
+
+        <div class="box" id="right_content">
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis porro ipsam qui placeat earum consequuntur
+                excepturi expedita non aliquam sunt ipsum obcaecati, iure, aliquid quas fugit quod eos quae quo?
+                Sit non assumenda eum repellendus minima fugit hic veniam. Doloribus eligendi odit doloremque numquam aliquid, 
+                quis molestiae ab tempora vitae minima fugiat amet sed saepe voluptatibus. Excepturi corrupti est cupiditate.
+                Impedit modi ratione ex qui. Ad magni animi saepe labore id quibusdam hic consequatur totam accusamus ipsam sequi 
+                libero reiciendis illum quasi, laborum excepturi, reprehenderit suscipit repellendus inventore neque similique!
+                Aliquid, ratione facilis in ea libero culpa quis odio a perspiciatis consequatur totam ullam animi incidunt aut 
+                consectetur delectus recusandae quos porro, possimus distinctio voluptate! Officia reprehenderit adipisci eos reiciendis.
+                Nobis ipsa saepe beatae illo animi debitis aliquid aliquam est sint modi! Ab dignissimos deleniti soluta dolores sed totam 
+                quo deserunt velit eligendi maxime, veniam cumque labore esse minus non?
+            </p>
+        </div>
+    </div>
+</body>
+</html>

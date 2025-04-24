@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transformation Basics</title>
+
+    <style>
+        .box{
+            background-color: rgba(0, 128, 0, 0.653);
+            position: relative;
+            width: 100px;
+            height: 100px;
+            top: 50px;
+            left: 100px;
+            transform: rotate(10deg);
+            /* transform: skew(80deg); */
+            /* transform: scale(2,4); */
+            /* transform: translate(200px, 100px); */
+            /* transform: matrix(2, -2, 1, 2, 150, 100); */ 
+            transition-property: all;  
+            transition-duration: 1s;
+        }
+
+        .box:hover, div#myDiv1:hover{
+            background-color: yellow;   
+           /* transform: rotateY(180deg); */
+           transform: rotate(360deg);
+            cursor: pointer;
+        }
+
+        div#myDiv1 {
+            transform: translate(200px, -100px) scale(2, 1.5) skew(0deg, -30deg);
+        }
+        
+        div#myDiv2 {
+            transform: translate(400px, -60px) scale(2, 1.5) skew(30deg, 0deg);
+        }
+        div#myDiv1:hover{
+            background-color: yellow;  
+            cursor: pointer;
+            transform: translate(200px, -100px) scale(3, 2) skew(-30deg, 0deg) rotate(180deg);
+            opacity: 0.6;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Css Transformation and Transition Property</h1>
+    <h2>CSS 2D Transforms Functions</h2>
+    <p>
+        CSS transforms allow you to move, rotate, scale, and skew elements.
+        CSS transforms allows elements styled with CSS to be transformed in two-dimensional or three-dimensional space.
+
+    </p>
+    <pre>
+        properties:
+            translate():  moves an element from its current position;
+                 (x-axis, y-axis)=> (50, 50) means right and down from current position
+            
+            rotate(): rotates an element clockwise or counter-clockwise according to a given degree
+           
+            scaleX(): increases or decreases the width of an element
+            scaleY(): increases or decreases the height of an element
+            scale():  increases or decreases the size of an element; scale(width, height)
+            
+            skewX():  skews an element along the X-axis by the given angle.
+            skewY():  skews an element along the Y-axis by the given angle.
+            skew(): skews an element along the X and Y-axis by the given angles.
+           
+            matrix(): The parameters are as follow: 
+                matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
+    </pre>
+    
+    <div class="box">
+        Normal box
+    </div>
+    
+    <div class="box" id="myDiv1">
+        Using the matrix() method. 
+    </div>
+        
+    <div class="box" id="myDiv2">
+        Another use of the matrix() method.
+    </div>
+    
+</body>
+</html>

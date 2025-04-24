@@ -1,0 +1,77 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{   
+    height: 1000px;
+}
+#nav{
+    position: sticky;
+    top: 0px;
+    background-color: brown;
+    height: 50px;
+    font-family: cursive;
+}
+#nav h3{
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    font-size: 25px;  
+}
+
+div li{
+    display: inline-block;
+    padding-right: 20px;
+    font-size: 18px;
+    color: white;
+    padding-top: 12px;
+
+}
+ul{
+    display: inline;
+    float: right;
+}
+li:hover{
+    /* background-color:black; */
+    color:blue;
+    cursor: pointer;
+}
+
+#cover{
+    background-image: url("../images/eat.jpg");
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#cover h1{
+    padding: 200px 0px;
+    text-align: center;
+    font-size: 60px;
+    font-family: cursive;
+    text-decoration:underline;
+}
+#container{
+    max-width: 1000px;
+    margin: auto;
+}
+#container>h1{
+    margin-top: 20px;
+}
+.dish{
+    border: 1px solid black;
+    width: 22%;
+    min-height: 200px;
+    float: left;
+    margin-top: 30px;
+    margin-left: 10px;
+    background-color: lightgrey;   
+
+}
+.dish h1{
+    text-align: center;
+    padding: 5px; 
+}
+.dish p{
+    padding: 5px 10px; 
+    text-align: justify;
+}

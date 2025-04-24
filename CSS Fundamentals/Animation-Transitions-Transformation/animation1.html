@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation Basics</title>
+    
+    <style>
+        body{
+            background-color:lightslategray;
+        }
+        .box1{
+            background-color: white;
+            width: 200px;
+            height: 200px;
+            animation-name: myanimation1;
+            animation-duration: 3s;
+            /*animation-delay: 2s;*/
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+        @keyframes myanimation1{
+            from{
+                background-color: white;
+                width: 200px;
+            }
+            to{
+                background-color: green;
+                width: 400px;
+            }
+        }
+
+        .box2{
+            background-color: white;
+            margin-top: 10px;
+            width: 200px;
+            height: 200px;
+            animation-name: myanimation2;
+            animation-duration: 3s;
+            animation-delay: 1s;
+            animation-iteration-count: 2;
+            animation-fill-mode: forwards;
+        }
+        @keyframes myanimation2{
+            from{
+                background-color: white;
+                width: 200px;
+            }
+            to{
+                background-color: red;
+                width: 400px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Animation #1</h1>
+    <p>CSS allows animation of HTML elements without using JavaScript!</p>
+    <pre>
+        @keyframes
+        animation-name: 
+        animation-duration: property defines how long an animation should take to complete, default value is 0s
+        animation-delay: property specifies a delay for the start of an animation
+        animation-iteration-count: property specifies the number of times an animation should run
+        animation-direction: specifies whether an animation should be played forwards, backwards or in alternate cycles
+        animation-timing-function:  property specifies the speed curve of the animation; ease(default), ease-in-out, liner etc
+        
+        animation-fill-mode: By default, once an animation ends, the element snaps back to its original state.
+                             But animation-fill-mode lets you control whether it should keep the final state
+        animation
+    </pre>
+    <div class="box1">
+        hello this is box #1
+    </div>
+    <div class="box2">
+        hello this is box #2
+    </div>
+</body>
+</html>

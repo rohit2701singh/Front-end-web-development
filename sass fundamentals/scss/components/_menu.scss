@@ -1,0 +1,14 @@
+.nav-bar {
+	background-color: green;
+	color: white;
+	font-size: 20px;
+    margin-top: 30px;
+	ul {
+		margin: 0;
+		padding: 0;
+		li {
+			display: inline-block;
+            padding: 10px;
+		}
+	}
+}

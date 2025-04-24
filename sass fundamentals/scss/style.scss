@@ -1,0 +1,112 @@
+//All @use (and @forward) rules must appear at the top of your file before any styles, variables, or mixins.
+
+// import(@use) and partials
+@use "components/menu";
+@use "components/header";
+@use "components/footer";
+
+// variables
+$background-color: #ddd;
+$color1: red;
+$color2: green;
+
+body {
+	background-color: $background-color;
+	font-family: cursive;
+	height: 2000px;
+}
+
+.class-a {
+	color: $color1;
+	font-size: 20px;
+}
+.class-b {
+	color: $color2;
+}
+
+// nesting
+nav {
+	background-color: blue;
+	color: white;
+	font-size: 20px;
+	margin-top: 10px;
+	ul {
+		margin: 0;
+		padding: 0;
+		li {
+			display: inline-block;
+			padding: 10px;
+		}
+	}
+}
+
+.grand-parent {
+	background-color: aqua;
+	margin-top: 10px;
+	padding: 10px;
+	.parent {
+		background-color: brown;
+		padding: 15px;
+		.child {
+			background-color: yellow;
+			padding: 20px;
+		}
+	}
+}
+
+// class generation
+.gp {
+	background-color: cadetblue;
+	margin-top: 30px;
+	padding: 20px;
+	&-pr {
+		background-color: palevioletred;
+		padding: 15px;
+		&-ch {
+			background-color: lightslategrey;
+			padding: 10px;
+			& .heading {
+				background-color: white;
+				text-align: center;
+			}
+		}
+	}
+}
+
+// @mixin and @include
+@mixin important-text {
+	padding: 5px;
+	color: red;
+	font-size: 20px;
+	font-weight: bold;
+	border: 1px solid blue;
+}
+.danger {
+	@include important-text;
+	background-color: greenyellow;
+}
+.success {
+	@include important-text;
+	color: green;
+	padding-left: 20px;
+	background-color: greenyellow;
+}
+
+// @extend and Inheritance
+.button-basic {
+	font-size: 20px;
+	padding: 10px;
+	border: none;
+	text-align: center;
+	cursor: pointer;
+    background-color: chocolate
+}
+.button-report {
+	@extend .button-basic;
+	background-color: red;
+}
+.button-submit {
+	@extend .button-basic;
+	background-color: green;
+	color: white;
+}

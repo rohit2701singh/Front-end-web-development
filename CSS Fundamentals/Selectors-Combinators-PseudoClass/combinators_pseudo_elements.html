@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinators and Pseudo elements</title>
+    
+    <style>
+        /* dirct decendent */
+        div > span{
+            background-color: red;
+        }
+
+        /* same level siblings */
+        div ~ span{
+            background-color: yellow;
+        }
+
+        /* next siblings immediately next */
+        div + p{
+            background-color: magenta;
+        }
+
+        /* attribute selector */
+        a[target="_blank"]{
+            background-color: aqua;
+        }
+        a[target="_self"]{
+            background-color:chartreuse;
+        }
+
+        /* Pseudo Selctors=> :: for pseudo elements and : for pseudo class */
+
+        .testing-pseudo li:first-child{
+            background-color:cornflowerblue;
+        }
+        .testing-pseudo li:last-child{
+            background-color:darkgreen;
+        }
+        .testing-pseudo li:nth-child(3n){
+            background-color:gray;
+        }
+        .testing-pseudo li:hover{
+            background-color:magenta;
+            cursor: pointer;
+        }
+
+        /* select item in list. Example of pseudo element*/
+        .testing-pseudo li::selection{
+            background-color: blue;
+            color: red;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Combinators and Pseudo Classes</h1>
+    <p>There are four different combinators in CSS:</p>
+    <ul>
+        <li>Descendant combinator (space)</li>
+        <li>Child combinator (>)</li>
+        <li>Next sibling combinator (+)</li>
+        <li>Subsequent-sibling combinator (~)</li>
+    </ul>
+    <hr>
+
+    <div>
+        <p>
+            <span>I'm inside p tag which is inside div</span>
+        </p>
+        <span>I'm inside div but not in p so direct Descendant</span>
+    </div>
+
+    <p>I'm first para sibling outside div. 
+        note: first p element that are placed immediately after div elements.
+        "adjacent" means "immediately following"
+    </p>
+    <p>I'm second para sibling outside div</p>
+
+    <span>I'm first span sibling outside div</span>
+    <span>I'm second span sibling outside div</span>
+    
+    
+    <br><br>
+    
+    <a href="" target="_blank">First Link</a>
+    <a href="" target="_self">Second Link</a>
+    <a href="">Third Link</a>
+
+    <hr>
+    <h2>Pseudo Classes and Elements</h2>
+    <p>
+        A CSS <b>pseudo-class</b> is used to define a special state of an element.
+        ex: Style an element when a user moves the mouse over it.
+        note=> :nth-child() => : single colon
+        <pre>
+            selector:pseudo-class {
+                property: value;
+              }
+        </pre>
+    </p>
+
+    <p>
+        A CSS <b>pseudo-element</b> is used to style specific parts of an element.
+        ex: Style the first letter or line, of an element. Styles the user-selected text
+        note=> ::selection => :: double colon
+        <pre>
+            selector::pseudo-element {
+                property: value;
+              }
+        </pre>
+
+    </p>
+    
+    <ul class="testing-pseudo">
+        <li>Item 1 first child</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+        <li>Item 8</li>
+        <li>Item 9</li>
+        <li>Item 10</li>
+        <li>Item 11</li>
+        <li>Item 12</li>
+        <li>Item 13 last child</li>
+    </ul>
+
+    
+</body>
+</html>

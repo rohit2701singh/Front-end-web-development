@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Define your description for your web page here">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="3" > optional, refresh page in every 3 second -->
+    <title>meta tags</title>
+</head>
+<body>
+
+    <h1>Forms</h1>
+<!--
+    autocomplete by default is on. Browser will give you suggestion for form field.
+    enctype="multipart/form-data" without this files will not get uploaded.
+    <select name="year" size="2" multiple> to select multiple options press ctrl.
+    novalidate: it disables the browser's built-in validation process for the form
+
+    the 'for' attribute of label must be equal to 'id' attribute of input element
+-->
+
+    <form action="" method="POST" autocomplete="off" enctype="multipart/form-data" novalidate>
+        <label for="username">Username</label>
+        <input type="text" name="username" placeholder="name" ><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="email"><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" placeholder="password"><br>
+
+        <label for="bio">Bio</label>
+        <textarea rows="5" cols="20" name="bio" id="bio" placeholder="write your bio here" ></textarea><br>
+
+        <label for="year">Year</label>
+        <select name="year">
+            <optgroup>
+                <option value="">First Year</option>
+                <option value="">Second Year</option>
+            </optgroup>
+            <optgroup>
+                <option value="">Third Year</option>
+                <option value="">Fourth Year</option>
+            </optgroup>
+            
+        </select><br>
+
+        <label for="ice-cream-choice">Choose a flavor:</label>
+        <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+
+        <datalist id="ice-cream-flavors">
+            <option value="Chocolate"></option>
+            <option value="Coconut"></option>
+            <option value="Mint"></option>
+            <option value="Strawberry"></option>
+            <option value="Vanilla"></option>
+        </datalist><br>
+
+        <fieldset>
+            <legend>Education Info:</legend>
+
+            <label>12th marks</label><br>
+            <input type="12th marks" name="" id=""><br>
+
+            <label>10th marks</label><br>
+            <input type="10th marks">
+
+        </fieldset>
+        
+
+        <input type="submit" value="Login">
+    </form>
+    <hr>
+    
+    <h2>sending form data in w3schools server</h2>
+    <form action="https://www.w3schools.com/action_page.php" method="get" target="_blank">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+      
+    <p>Click on the submit button, and the input will be sent to a page on the server called "action_page.php".</p>
+
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Sidebar and Dropdown</title>
+    <!-- css file link -->
+    <link rel="stylesheet" href="css/navbar_sidebar.css">
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <i class="fa fa-pied-piper-alt"></i>
+        <ul class="">
+            <li>
+                <i class="fa fa-home"></i>
+                <a href="">Home</a>
+            </li>
+            <li>
+                <i class="fa fa-info-circle"></i>
+                <a href="">About</a>
+            </li>
+            <li>
+                <i class="fa fa-wrench"></i>
+                <a href="">Services</a>
+                <div class="submenu-1">
+                    <ul>
+                        <li><a href="">service #1</a></li>
+                        <li><a href="">service #2</a></li>
+                        <li class="item-hover">
+                            <a href="">service #3</a>
+                            <div class="submenu-2">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.w3schools.com/css/css_pseudo_elements.asp" target="_blank">submenu-1</a>
+                                    </li>
+                                    <li><a href="">submenu-2</a></li>
+                                    <li><a href="">submenu-3</a></li>
+                                    <li><a href="">submenu-4</a></li>
+                                    <li><a href="">submenu-5</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="">service #4</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <i class="fa fa-shopping-cart"></i>
+                <a href="">Products</a>
+            </li>
+            <li>
+                <i class="fa fa-phone"></i>
+                <a href="">Contact</a>
+            </li>   
+        </ul>
+    </div>
+
+    <div class="sidebar">
+        <ul class="">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+
+            <li><a href="">Products</a></li>
+            <li><a href="">Contact</a></li> 
+        </ul>
+    </div>
+
+    <div class="content">
+        <p>
+            <pre>
+                <u>Instructions:</u>
+                
+                1.  A navigation bar needs standard HTML as a base.
+                2.  In our examples we will build the navigation bar from a standard HTML list.
+                3.  A navigation bar is basically a list of links, so using the ul and li elements makes perfect sense
+                4.  Remove the bullets and the margins and padding from the list:
+                        list-style-type: none;
+                5.  set .sidebar{ position: fixed; } so that this container appears next to sidebar 
+                6.  There are two ways to create a horizontal navigation bar. Using inline or floating list items.
+                7.  float: right; - Use float to get block elements to float next to each other
+                        li {
+                            float: left;
+                        } to set navigation bar right side of the screen. Check layout project.
+                8. z-index sets the stacking order of the element — how "in front" or "behind" it appears compared to other overlapping elements.
+                    Elements with higher z-index appear on top of elements with lower z-index
+                
+            </pre>
+        </p>
+    </div>
+    
+</body>
+</html>

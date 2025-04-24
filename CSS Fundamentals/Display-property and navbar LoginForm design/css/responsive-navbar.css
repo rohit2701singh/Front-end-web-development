@@ -1,0 +1,93 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	box-sizing: border-box;
+}
+body,
+html {
+	width: 100%;
+	height: 100%;
+}
+nav {
+	width: 100%;
+	height: 60px;
+	background-color: #282a35;
+}
+label.logo {
+	font-size: 30px;
+	color: white;
+	margin: 0 30px;
+	line-height: 60px; /* by setting line-height equal to nav height item will get centered automatically */
+}
+nav ul {
+	float: right;
+	list-style: none;
+}
+nav ul li {
+	display: inline-block;
+	line-height: 60px;
+}
+nav ul li a {
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	text-transform: capitalize;
+	padding: 8px 20px;
+}
+nav ul li a.active,
+a:hover {
+	background-color: #3f4256;
+}
+#checkbtn {
+	float: right;
+	line-height: 60px;
+	margin-right: 15px;
+	font-size: 25px;
+	color: white;
+	display: none;
+}
+#check {
+	display: none;
+}
+#check:checked ~ ul {
+	left: 0; /* bring nav items from left: -100% to view screen*/
+}
+
+@media (max-width: 815px) {
+	#checkbtn {
+		display: block;
+		cursor: pointer;
+	}
+	nav ul {
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(63, 66, 86, 0.7);
+		position: fixed;
+		top: 60px;
+		left: -100%; /* hiding navbar off-screen before animating them into view.*/
+		transition: 0.5s;
+		padding-top: 15px;
+	}
+	nav ul li {
+		display: block;
+		text-align: center;
+		line-height: 50px;
+	}
+}
+@media (max-width: 350px) {
+	label.logo {
+		margin: 0 15px;
+		font-size: 25px;
+	}
+}
+
+/* background color change */
+/* #mode-change {
+    display: none;
+} */
+
+#mode-change:checked ~ .page-wrapper {
+    background-color: red;
+}
+

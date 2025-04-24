@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sass Basics</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- for variables  -->
+    <h1>This is Sass</h1>
+    <div class="class-a">Hello using varible name</div>
+    <div class="class-b">Hello</div>
+
+    <!-- for nesting and class generation -->
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Services</li>
+        </ul>
+    </nav>
+
+    <div class="grand-parent">
+        <div class="parent">
+            <div class="child">child</div>
+        </div>
+    </div>
+
+    <div class="gp">
+        <div class="gp-pr">
+            <div class="gp-pr-ch">
+                <h2 class="heading">child</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- for import(@use) and partials -->
+    <nav class="nav-bar">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Services</li>
+            <li>Address</li>
+        </ul>
+    </nav>
+    <header class="header">This is a header. Stylesheet loaded by @use</header>
+    <footer class="footer">This is a footer. Stylesheet loaded by @use</footer>
+
+    <!-- for mixin and include -->
+    <p class="danger">Warning! This is some important text..using @mixin and @include</p>
+    <p class="success">Success! This is some important text..using @mixin and @include</p>
+
+    <!-- for @extend -->
+    <button class="button-basic">Basic Button</button>
+    <button class="button-report">Report Button</button>
+    <button class="button-submit">Submit Button</button>
+
+</body>
+</html>

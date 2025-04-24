@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input attributes</title>
+</head>
+<body>
+    <!--
+        autocomplete: if on, browser automatically complete values based on values that the user has entered before.
+        novalidate: it disables the browser's built-in validation process for the form
+    -->
+    <form action="" method="post" enctype="multipart/form-data" autocomplete="off" novalidate>
+        
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="Rohit"><br>
+
+        <!--
+            value: specifies an initial value. If not changed, initial value will be submited
+            readonly: input field cannot be modified. 
+            value of a read-only input field will be sent when submitting the form.
+        -->
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Read Only Name" readonly><br>
+
+        
+        <!--
+            placeholder: short hint that describes the expected value in the field.
+            disabled: disabled input field is unusable and un-clickable.
+                The value of a disabled input field will not be sent when submitting the form.
+            
+            required: field must be filled out before submitting the form.
+            size: (default 20) specifies the visible width on input field, in characters.
+
+            maxlength: maximum number of characters allowed in an input field.
+            min/max: attributes specify the minimum and maximum values for an input field.
+            multiple: user is allowed to enter more than one value in an input field.
+
+            title: provides additional information about an element, 
+                displayed when the user hovers their mouse over the element
+            step: attribute specifies the legal number intervals for an input field.
+                if step="3", legal numbers could be -3, 0, 3, 6....
+
+            autofocus: specifies that an input field should automatically 
+                get focus when the page loads.(check in browser)
+
+            height/ width: specify the height and width of an <input type="image"> element,
+                If height and width are set, the space required for the image is reserved when the page is loaded.
+   
+        -->
+        <label for="">Disabled Field:</label><br>
+        <input type="text" name="" placeholder="it's disabled field" disabled><br>
+
+        <label for="">Username :</label><br>
+        <input type="text" name="" maxlength="10" placeholder="only 10 char allowed" size="40" required autofocus><br>
+
+        <label for="">Email:</label><br>
+        <input type="email" name="" placeholder="xyz@email.com" required><br>
+
+        <label for="">Password:</label><br>
+        <input type="password" name="" required size="60" placeholder="my size is 60 character"><br>
+
+        <label for="quantity">Quantity (between 5 and 20):</label>
+        <input type="number" id="quantity" name="quantity" min="5" max="20"><br>
+
+        <label for="">Select Price Range (100-200):</label>
+        <input type="range" min="100" max="200" name="" id=""><br>
+
+        <label for="file">Multiple files select :</label>
+        <input type="file" title="press ctrl then select multiple files" multiple><br>
+
+        <label for="points">Steps:</label>
+        <input type="number" id="points" name="points" step="3"><br><br>
+        <!--
+            height/ width: specify the height and width of an <input type="image"> element,
+                If height and width are set, the space required for the image is reserved when the page is loaded.
+                Without these attributes, the browser cannot reserve the appropriate space to it. 
+                The effect will be that the page layout will change during loading
+        -->
+        <!-- example of an image as the submit button -->
+        <label for="img">Image file Below: </label><br>
+        <input type="image" src="images/train_demo.jpeg" alt="submit" width="250" height="150"><br><br>
+
+        <input type="submit" name="" id="">
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,93 @@
+==> Intro
+Sass is based on Ruby programming language.
+Sass has two syntaxes! The SCSS syntax (.scss) is used most commonly. 
+    It’s a superset of CSS, which means all valid CSS is also valid SCSS. 
+The indented syntax (.sass) is more unusual: it uses indentation rather than 
+    curly braces to nest statements, and newlines instead of semicolons to separate them.
+
+
+==> What is Sass (Syntactically Awesome Stylesheet)?
+1. extension of css 
+2. css pre-processor
+3. reduces repetition of css 
+
+
+==> Why Use Sass?
+Stylesheets are getting larger, more complex, and harder to maintain.
+    This is where a CSS pre-processor can help.
+Sass lets you use features that do not exist in CSS, like variables, 
+    nested rules, mixins, imports, inheritance, built-in functions, and other stuff.
+
+
+==> How Does Sass Work (transpile)?
+A browser does not understand Sass code. 
+    Therefore, you will need a Sass pre-processor to convert Sass code into standard CSS.
+This process is called TRANSPILING. So, you need to give a transpiler (some kind of program) 
+    some Sass code and then get some CSS code back.
+Transpiling is a term for taking a source code written in one language and transform/translate it into another language
+
+=> Sass Comments
+Sass supports standard CSS comments /* something */ 
+    and in addition it supports inline comments using // something.
+
+
+==> NOTE(Before using Sass)
+1. install sass compiler extension in vscode
+2. check extension's setting and make changes in vs code's setting.json
+3. change liveSassCompile.settings.autoprefix setting to --> 
+
+    liveSassCompile.settings.formats[
+        {
+            "format": "expanded", // or compressed
+            "savePath": "/css",  // save generated css file inside css folder
+        }
+    ]
+    liveSassCompile.settings.generateMap: flase // if you don't want .map extension file(default true)
+
+4. use 'watch' icon in below status bar to generated css file, before that create a scss file.
+
+
+=> Topics to cover
+1. variables
+2. nesting
+3. imports (@import) and partials (note: @import is depricated, use @use)
+4. mixins (@mixin) and include(@include)
+5. extend (@extend) and inheritance
+
+
+<<<=== DETAILS ===>>>
+
+1. Variables: Variables are a way to store information that you can re-use later.
+                can store- string, number, boolean, color, list, null
+                    $variablename: value;
+
+2. Nesting: Sass lets you nest CSS selectors in the same way as HTML.
+            The parent selector, &, is a special selector invented by Sass 
+                that’s used in nested selectors to refer to the outer selector.
+
+3. Import(@use) and partials: One way to write DRY code is to keep related code in separate files.
+                                @use directive allows you to include the content of one file in another.
+                                @use filename; (do not need to specify a file extension)
+
+                        By default, Sass transpiles (create css file) all the .scss files directly. 
+                        However, when you want to import a file, you do not need the file to be transpiled directly.
+
+                        If you start the filename with an underscore, Sass will not transpile it.
+                        The underscore lets Sass know that the file is only a partial file and 
+                            that it should not be generated into a CSS file. 
+                        Files named this way are called partials in Sass.
+                            example: _colors.scss file => @use "colors";
+                        Stylesheets loaded by @use are called "modules"
+                ==> All @use (and @forward) rules must appear at the top of your file before any styles, variables, or mixins.
+
+
+4. Mixin(@mixin) and include(@include): The @mixin directive lets you create CSS code that is to be reused throughout the website.
+                                        @include directive is created to let you use (include) the mixin.
+                        define mixin => @mixin name { property: value; property: value;}
+                        use mixin => selector { @include mixin-name; other-property: vlaue; }
+
+
+5. @extend and Inheritance: It lets you share a set of CSS properties from one selector to another
+
+
+                                                        

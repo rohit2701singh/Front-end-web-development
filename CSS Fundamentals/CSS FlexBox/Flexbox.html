@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS FlexBox</title>
+
+		<style>
+            pre{
+                font-family: cursive;
+            }
+			.parent-container {
+				background-color: cadetblue;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-between;
+                /* justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;*/
+				/*align-items: baseline;*/
+				align-content: stretch;
+			}
+			.parent-box {
+				background-color: red;
+				width: 100px;
+				font-size: 20px;
+				padding: 20px;
+				margin: 10px;
+			}
+
+			.child-container {
+				background-color: yellow;
+				display: flex;
+			}
+			.child-box {
+				background-color: aqua;
+				font-size: 20px;
+				padding: 20px;
+				margin: 10px;
+			}
+
+			#box-1 {
+				flex-grow: 2;
+			}
+			#box-5 {
+				flex-grow: 1;
+			}
+			#box-2 {
+				align-self: flex-stat;
+			}
+
+            .flex-container {
+                display: flex;
+                align-items: stretch;
+                background-color: #f1f1f1;
+            }
+              
+            .flex-container > div {
+                background-color: DodgerBlue;
+                color: white;
+                width: 100px;
+                margin: 10px;
+                text-align: center;
+                line-height: 75px;
+                font-size: 30px;
+            }
+            .flex-container .box-item{
+                flex-basis: 200px; 
+                flex-shrink: 0;
+            }
+
+		</style>
+	</head>
+	<body>
+		<h1>Flexible Boxes</h1>
+		<p>
+			Since flexbox is a whole module and not a single property, it involves a
+			lot of things including its whole set of properties. Some of them are
+			meant to be set on the container (parent element, known as “flex
+			container”) whereas the others are meant to be set on the children (said
+			“flex items”).
+		</p>
+        <pre style="text-wrap: auto;">
+            <b>The CSS properties we use for the flex container are:</b>
+                flex-direction: row | row-reverse | column | column-reverse
+                flex-wrap: nowrap | wrap | wrap-reverse
+                flex-flow: column wrap (shorthand property for setting both the flex-direction and flex-wrap properties)
+                
+                justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly(alignment along the main axis)
+                align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline (alignment along the cross axis)
+                align-content:  similar to align-items, but instead of aligning flex items, it aligns the flex lines.
+                
+                gap: 10px;  (spacing only between items not on the outer edges.)
+                gap: 10px 20px; /* row-gap column gap */
+                row-gap: 10px;
+                column-gap: 20px;
+        </pre>
+        <pre style="text-wrap: auto;">
+            <b>The CSS properties we use for flex items are:</b>
+                order: specifies the order of the flex items inside the flex container.(default 0)
+                flex-grow: specifies how much a flex item will grow relative to the rest of the flex items.(default 0)
+                flex-shrink: specifies how much a flex item will shrink relative to the rest of the flex items if necessary.(default 1)
+                flex-basis: specifies the initial length of a flex item.
+                flex: shorthand for flex-grow, flex-shrink and flex-basis combined (default is 0 1 auto)
+                align-self: specifies the alignment for the selected item, overrides the default alignment set by the container's align-items property.
+        </pre>
+		<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"target="_blank">
+			CLICK HERE TO READ MORE... 
+        </a><br /><br />
+
+		<div class="parent-container">
+			<div class="parent-box" style="height: 50px; padding-top: 80px">1</div>
+			<div class="parent-box" style="height: 100px">2</div>
+			<div class="parent-box" style="height: 150px">3</div>
+			<div class="parent-box" style="height: 200px">4</div>
+			<div class="parent-box" style="height: 250px">5</div>
+		</div>
+		<hr />
+
+		<div class="child-container">
+			<div style="order: 4;" class="child-box" id="box-1">box 1; order set to 4</div>
+			<div style="order: 3;" class="child-box" id="box-2">2</div>
+			<div style="order: 5;" class="child-box" id="box-3">3</div>
+			<div style="order: 2;" class="child-box" id="box-4">4</div>
+			<div style="order: 1;" class="child-box" id="box-5">5</div>
+		</div>
+
+
+        <h1>The flex-basis and flex-shrink Property</h1>
+        <p>Set the initial length of the third flex item to 200 pixels</p>
+        <p>Do not let the third flex item shrink as much as the other flex items:</p>
+        <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div class="box-item">3</div>
+            <div>4</div>
+        </div>
+
+	</body>
+</html>
