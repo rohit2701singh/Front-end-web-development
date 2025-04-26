@@ -1,0 +1,21 @@
+@use "config";
+
+%btn{
+    display: inline-block;
+    border-radius: 5px;
+    padding: 8px 20px;
+    margin: 3px;
+    &:hover{
+        transform: scale(0.98);
+    }
+}
+.btn-primary{
+    @extend %btn;
+    // background-color: lighten(config.$primary-color, 10%);  // 10% lighten primary-color
+    @include config.set-background(lighten(config.$primary-color, 10%));
+}
+.btn-secondary{
+    @extend %btn;
+    // background-color: config.$secondary-color;
+    @include config.set-background(config.$secondary-color);
+}

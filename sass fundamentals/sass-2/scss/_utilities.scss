@@ -1,0 +1,21 @@
+.container {
+	padding: 0 200px;
+	margin: 0, auto;
+}
+
+// margin and padding classes (looping)
+$space-ammounts: (1,2,3);
+@each $space in $space-ammounts{
+    .m-#{$space}{
+        margin: #{$space}rem;
+    }
+    .my-#{$space}{
+        margin: #{$space}rem 0;
+    }
+    .p-#{$space}{
+        padding: #{$space}rem;
+    }
+    .py-#{$space}{
+        padding: #{$space}rem 0;
+    }
+}

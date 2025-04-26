@@ -1,0 +1,19 @@
+.loader{
+    font-family: cursive;
+    font-size: 40px;
+    color: red;
+}
+/* \2026 hexadecimal representation of the Unicode character U+2026 which is ellipsis */
+.loader::after{
+    content: '\2026'; 
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+    animation: dots 2s steps(4, end) infinite;
+    width: 0px;
+}
+@keyframes dots{
+    to{
+        width: 1.25em;
+    }
+}

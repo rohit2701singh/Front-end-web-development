@@ -1,0 +1,22 @@
+$light-color: #f4f4f4;
+$font-stack: Verdana, Geneva, Tahoma, sans-serif;
+$primary-color: #0e6cff; // dark background
+// $primary-color: #e0ffff; // light background
+
+$secondary-color: #ff8700;
+
+
+// set text color based on background color
+@function set-text-color($color){
+    @if(lightness($color) > 70){
+        @return green;
+    } @else{
+        @return #fff;
+    }
+}
+
+// set background and text color
+@mixin set-background($color){
+    background-color: $color;
+    color: set-text-color($color);
+}

@@ -47,7 +47,7 @@ Sass supports standard CSS comments /* something */
 4. use 'watch' icon in below status bar to generated css file, before that create a scss file.
 
 
-=> Topics to cover
+==> Topics to cover
 1. variables
 2. nesting
 3. imports (@import) and partials (note: @import is depricated, use @use)
@@ -60,10 +60,15 @@ Sass supports standard CSS comments /* something */
 1. Variables: Variables are a way to store information that you can re-use later.
                 can store- string, number, boolean, color, list, null
                     $variablename: value;
+        if you are loading Stylesheet (using @use) then You can access variables from another module by writing <namespace>.<variable>
+            ex: if variable is in _config.scss file=> config.$variablename to access variable
+            or  @use "confing" as * =>  means importing everything from 'file' without a namespace and can use variables directly, without prefixing
+
 
 2. Nesting: Sass lets you nest CSS selectors in the same way as HTML.
             The parent selector, &, is a special selector invented by Sass 
                 that’s used in nested selectors to refer to the outer selector.
+
 
 3. Import(@use) and partials: One way to write DRY code is to keep related code in separate files.
                                 @use directive allows you to include the content of one file in another.
@@ -78,7 +83,10 @@ Sass supports standard CSS comments /* something */
                         Files named this way are called partials in Sass.
                             example: _colors.scss file => @use "colors";
                         Stylesheets loaded by @use are called "modules"
+
                 ==> All @use (and @forward) rules must appear at the top of your file before any styles, variables, or mixins.
+                ==> @use 'file' as *; means importing everything from 'file' without a namespace and can use variables directly, without prefixing
+                    otherwise-> config(partial filename).$variablename to access variable
 
 
 4. Mixin(@mixin) and include(@include): The @mixin directive lets you create CSS code that is to be reused throughout the website.
