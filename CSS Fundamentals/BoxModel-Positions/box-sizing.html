@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Box Sizing: border-box</title>
+		<style>
+			/* without box-size */
+			.div1 {
+				width: 300px;
+				height: 100px;
+				border: 2px solid blue;
+			}
+
+			.div2 {
+				width: 300px;
+				height: 100px;
+				padding: 50px;
+				border: 2px solid red;
+			}
+
+			/* with box-size */
+			.with-size-div1 {
+				width: 300px;
+				height: 100px;
+				border: 2px solid blue;
+				box-sizing: border-box;
+			}
+
+			.with-size-div2 {
+				width: 300px;
+				height: 100px;
+				padding: 50px;
+				border: 2px solid red;
+				box-sizing: border-box;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>box-sizing: border-box;</h1>
+		<p>
+			The box-sizing property in CSS controls how the box model is handled for
+			the element it applies to.
+		</p>
+		<p>
+			The CSS box-sizing property allows us to include the padding and border in
+			an element's total width and height.
+		</p>
+		<p><code>box-sizing: content-box; /* Default */ </code></p>
+		<p>
+			content-box - only content; padding/border are added outside. (element
+			grows bigger)
+		</p>
+		<p>border-box - content + padding + border all inside the given size.</p>
+
+		<h2>Without the CSS box-sizing Property</h2>
+		<p>
+			By default, the width and height of an element is calculated like this:
+		</p>
+		<p>
+			width + padding + border = actual width of an element<br />
+			height + padding + border = actual height of an element
+		</p>
+		<p>
+			This means: When you set the width/height of an element, the element often
+			appears bigger than you have set (because the element's border and padding
+			are added to the element's specified width/height).
+		</p>
+
+		<h3>Without box-sizing</h3>
+
+		<div class="div1">
+			This div is smaller (width is 300px and height is 100px).
+		</div>
+		<br />
+		<div class="div2">
+			This div is bigger (width is also 300px and height is 100px but 50px
+			padding added).
+		</div>
+
+		<h2>With the CSS box-sizing Property</h2>
+		<p>
+			The <code>box-sizing</code> property allows us to include the padding and
+			border in an element's total width and height.
+		</p>
+		<p>
+			If you set <code>box-sizing: border-box;</code> on an element, padding and
+			border are included in the width and height:
+		</p>
+
+		<h3>With box-sizing</h3>
+
+		<div class="with-size-div1">Both divs are the same size now!</div>
+		<br />
+		<div class="with-size-div2">Hooray!</div>
+	</body>
+</html>

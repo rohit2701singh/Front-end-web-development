@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>inline-block</title>
+        <style>
+            div>p{
+                font-size: 20px;
+                font-weight: 700;
+                text-decoration: underline;
+            }
+        </style>
+	</head>
+	<body>
+        <h1>Difference between inline, block and inline-block</h1>
+        
+		<div class="wrapper">
+			<p>Inline elements:</p>
+			<ol>
+				<li>
+					respect left and right margins and padding, but
+					<strong>not</strong> top and bottom
+				</li>
+				<li>
+					<strong>cannot</strong> have a width and height set.
+					It will <strong>not accept height and width.</strong> It will just ignore it.
+				</li>
+				<li>allow other elements to sit to their left and right.</li>
+			</ol>
+
+			<p>Block elements:</p>
+			<ol>
+				<li>respect all of those</li>
+				<li>force a line break after the block element</li>
+				<li>acquires full-width if width not defined</li>
+			</ol>
+
+			<p>Inline-block elements:</p>
+			<ol>
+				<li>Characteristics of block, but lays out inline</li>
+				<li>allow other elements to sit to their left and right</li>
+				<li>respect top and bottom margins and padding</li>
+				<li>respect height and width</li>
+			</ol>
+
+			<blockquote>
+				<ul>
+					<li>
+						<p>
+							An inline element has no line break before or after it, and it
+							tolerates HTML elements next to it.
+						</p>
+					</li>
+					<li>
+						<p>
+							A block element has some whitespace above and below it and does
+							not tolerate any HTML elements next to it.
+						</p>
+					</li>
+					<li>
+						<p>
+							An inline-block element is placed as an inline element (on the
+							same line as adjacent content), but it behaves as a block element.
+						</p>
+					</li>
+				</ul>
+			</blockquote>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Float and Clear</title>
+		<style>
+			/* float */
+			.img-left {
+				float: left;
+				width: 170px;
+				height: 170px;
+				margin-right: 20px;
+				border: 3px solid blue;
+			}
+			.img-right {
+				float: right;
+				width: 170px;
+				height: 170px;
+				margin-left: 20px;
+				border: 3px solid blue;
+			}
+			.example {
+				padding-top: 20px;
+			}
+
+			/* clear */
+			.without-clr-div1 {
+				float: left;
+				padding: 10px;
+				border: 2px solid green;
+				background-color: yellow;
+			}
+
+			.without-clr-div2 {
+				padding: 10px;
+				border: 3px solid red;
+			}
+
+			.with-clr-div3 {
+				float: left;
+				padding: 10px;
+				border: 2px solid green;
+				background-color: peru;
+			}
+
+			.with-clr-div4 {
+				padding: 10px;
+				border: 3px solid red;
+				clear: left;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Float Right and Left</h1>
+		<p>
+			<strong>
+				In this example, the images will float to the right and left in the
+				paragraph, and the text in the paragraph will wrap around the images.
+				<br /><br />
+				Use float only when you want to wrap your text around. For complex
+				layouts, use flexbox or grid.
+			</strong>
+		</p>
+
+		<p class="example">
+			<img class="img-right" src="images/eat.jpg" alt="" />
+			<img class="img-left" src="images/eat.jpg" alt="" />
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, voluptatem
+			nisi eaque nihil totam ut enim provident unde omnis aliquid distinctio!
+			Blanditiis eaque enim aliquid in ratione, consequatur suscipit tempora.
+			Dolorum, rerum excepturi animi quaerat odit incidunt. Earum facilis
+			laboriosam obcaecati. Id ut qui nemo eaque obcaecati! Aperiam nemo aliquam
+			magni exercitationem similique quidem libero nobis soluta minus. Dolores
+			iure neque tenetur doloribus cum, odit consequatur, mollitia ratione
+			libero, voluptas deleniti unde non officiis nostrum quas suscipit?
+		</p>
+
+		<h2>Clear</h2>
+		<p>
+			<strong>
+				When we use the float property, and we want the next element below (not
+				on right or left), we will have to use the clear property. The clear
+				property specifies what should happen with the element that is next to a
+				floating element.
+			</strong>
+		</p>
+
+		<h2>Without clear</h2>
+		<div class="without-clr-div1">div1</div>
+		<div class="without-clr-div2">
+			div2 - Notice that div2 is after div1 in the HTML code. However, since
+			div1 floats to the left, the text in div2 flows around div1.
+		</div>
+		<br /><br />
+
+		<h2>With clear</h2>
+		<div class="with-clr-div3">div3</div>
+		<div class="with-clr-div4">
+			div4 - Here,<strong> clear: left; </strong>moves div4 down below the
+			floating div3. The value "left" clears elements floated to the left. You
+			can also clear "right" and "both".
+		</div>
+	</body>
+</html>
