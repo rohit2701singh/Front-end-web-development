@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Portfolio Website</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,500;1,500&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- default stylesheet -->
+		<link rel="stylesheet" href="../css/default.css" />
+		<!-- change theme using javascript -->
+		<link id="theme-style" rel="stylesheet" href="">
+
+	</head>
+	<body>
+		<!-- intro section -->
+		<section class="s1">
+			<div class="main-container">
+				<div class="greeting-wrapper">
+					<h1>Hi! I'm Rohit Singh</h1>
+				</div>
+				<div class="intro-wrapper">
+					<div class="nav-wrapper">
+						<div class="dots-wrapper">
+							<div class="browser-dot" id="dot-1"></div>
+							<div class="browser-dot" id="dot-2"></div>
+							<div class="browser-dot" id="dot-3"></div>
+						</div>
+						<ul id="navigation">
+							<li><a href="#">Contact</a></li>
+							<!-- <li><a href="#">Contact</a></li> -->
+						</ul>
+					</div>
+					<div class="left-column">
+						<img id="profile-pic" src="../images/profile.jpg" alt="" />
+						<h5 style="text-align: center; line-height: 0">
+							Personalize Theme
+						</h5>
+						<div id="theme-options-wrapper">
+							<div data-mode="light" class="theme-dot" id="light-mode"></div>
+							<div data-mode="blue" class="theme-dot" id="blue-mode"></div>
+							<div data-mode="green" class="theme-dot" id="green-mode"></div>
+							<div data-mode="purple" class="theme-dot" id="purple-mode"></div>
+						</div>
+						<p id="settings-note">
+							*Theme settings will be saved for <br />your next visit
+						</p>
+					</div>
+
+					<div class="right-column">
+						<div id="preview-shadow">
+							<div id="preview">
+								<div class="corner" id="corner-tl"></div>
+								<div class="corner" id="corner-tr"></div>
+								<h3>What I Do</h3>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Laborum, velit?
+								</p>
+								<div class="corner" id="corner-br"></div>
+								<div class="corner" id="corner-bl"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- about section -->
+		<section class="s2">
+			<div class="main-container">
+				<div class="about-wrapper">
+					<div class="about-me">
+						<h4>More about me</h4>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing dolor sit
+							amet, consectetur adipisicin elit. Nemo, magnam!
+						</p>
+						<p>
+							Lorem ipsum dolor sit amet, dolor sit amet, consectetur adipisicin
+							consectetur adipisicing elit. Ex, optio.
+						</p>
+						<hr />
+
+						<h4>Top Expertise</h4>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Distinctio, tenetur.
+							<a href="../images/profile.jpg" target="_blank">Download Resume</a>
+						</p>
+
+						<div id="skills">
+							<ul>
+								<li>python</li>
+								<li>flask</li>
+								<li>front end</li>
+								<li>sqlchemy</li>
+								<li>django</li>
+							</ul>
+							<ul>
+								<li>javascript</li>
+								<li>web scrapping</li>
+								<li>oops</li>
+								<li>data analysis</li>
+								<li>sass</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="social-links">
+						<img src="../images/profile.jpg" alt="" id="social-img" />
+						<h3>Find me on Insta & Linkedin</h3>
+						<a href="" target="_blank">Instagram</a>
+						<br />
+						<a href="" target="_blank">Linkedin</a>
+						<p></p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- portfolio section -->
+		<section class="s1">
+			<div class="main-container">
+				<h3 style="text-align: center">Some of my past projects</h3>
+				<div class="post-wrapper">
+					<div>
+						<div class="post">
+							<img class="thumbnail" src="../images/profile.jpg" alt="" />
+							<div class="post-preview">
+								<h6 class="post-title">Post Title</h6>
+								<p class="post-intro">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Aliquam, voluptate?
+								</p>
+								<a href="post.html">Read More..</a>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="post">
+							<img class="thumbnail" src="../images/profile.jpg" alt="" />
+							<div class="post-preview">
+								<h6 class="post-title">Post Title</h6>
+								<p class="post-intro">
+									Lorem ipsum dolor sit em ipsum dolor sit amet consectet amet
+									consectetur adipisicing elit. Aliquam, voluptate? em ipsum
+									dolor sit amet consectet.
+								</p>
+								<a href="#">Read More..</a>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="post">
+							<img class="thumbnail" src="../images/profile.jpg" alt="" />
+							<div class="post-preview">
+								<h6 class="post-title">Post Title</h6>
+								<p class="post-intro">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Aliquam, voluptate?
+								</p>
+								<a href="#">Read More..</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- contact section -->
+		<section class="s2">
+			<div class="main-container">
+                <a href=""></a>
+				<h3 style="text-align: center">Get In Touch</h3>
+				<form action="" id="contact-form">
+					<a name="contact"></a>
+
+					<label>Name</label>
+					<input class="input-field" type="text" name="name" />
+
+					<label>Subject</label>
+					<input class="input-field" type="text" name="subject" />
+
+					<label>Email</label>
+					<input class="input-field" type="text" name="email" />
+
+					<label>Message</label>
+					<textarea class="input-field" name="message"></textarea>
+					<input type="submit" id="submit-btn" value="Send" />
+				</form>
+			</div>
+		</section>
+
+		<!-- javascript file -->
+		<script src="../js/script.js" type="text/javascript"></script>
+	</body>
+</html>
