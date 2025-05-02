@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>website-3</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<!-- navbar -->
+		<nav>
+			<div class="navbar">
+				<div class="logo">
+					<h2 class="logo-title"><a href="">Portfolio Template</a></h2>
+				</div>
+				<ul class="nav-items">
+					<li><a href="#">home</a></li>
+					<li><a href="#">about</a></li>
+					<li><a href="#">services</a></li>
+					<li><a href="#">projects</a></li>
+					<li><a href="#">contact me</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- top section -->
+		<section class="top-section">
+			<div class="info-text">
+				<h1 class="info-detail">
+					Hi! my name is <span class="name">Rohit</span><br />
+					and I am a passionate <br />
+					<!-- Web Developer -->
+					<!-- Element to contain animated typing -->
+					<span id="element"></span>
+				</h1>
+			</div>
+		</section>
+
+		<!-- typed js cdn -->
+		<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+		<!-- Setup and start animation! -->
+		<script>
+			var typed = new Typed("#element", {
+				strings: [
+					"Self-taught Python Programmer.",
+					"Backend Developer.",
+					"Flask App Builder.",
+					"Aspiring Full-Stack Developer.",
+					"Data Enthusiast.",
+					"Automation Enthusiast.",
+					"Tech Explorer.^3000", // wait for 3sec
+				],
+				typeSpeed: 30,
+                backDelay: 1400,
+				backSpeed: 20,
+				loop: true,
+				loopCount: 3,
+			});
+		</script>
+	</body>
+</html>
