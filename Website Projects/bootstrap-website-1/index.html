@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bootstrap Template</title>
+		<!-- bootstrap link -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="assets/css/style.css" />
+	</head>
+
+	<body>
+		<!-- navbar start -->
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+			<div class="container">
+				<a href="#" class="navbar-brand">
+					<img class="logo" src="assets/images/mylogo.png" alt="">
+				</a>
+				<button
+					class="navbar-toggler"
+					data-bs-toggle="collapse"
+					data-bs-target="#mynav"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="mynav">
+					<ul class="navbar-nav text-center ms-auto">
+						<li class="nav-item me-3"><a href="#" class="nav-link"><i class="fa-solid fa-home"></i> home</a></li>
+						<li class="nav-item me-3"><a href="#about" class="nav-link"><i class="fa-solid fa-address-book"></i> about</a></li>
+						<li class="nav-item me-3"><a href="#services" class="nav-link"><i class="fa-solid fa-gear"></i> services</a></li>
+						<li class="nav-item"><a href="#contact" class="nav-link"><i class="fa-solid fa-phone"></i> contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- navbar ends -->
+
+		<!-- banner slider -->
+		<div
+			id="myslider"
+			class="carousel slide"
+			data-bs-ride="carousel"
+			data-bs-touch="true"
+		>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img
+						src="assets/images/img4.jpg"
+						class="d-block w-100"
+						alt="banner-1"
+					/>
+					<div class="carousel-caption d-none d-md-block">
+						<h1>Bootstrap Template Website</h1>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur,
+							asperiores?
+						</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img
+						src="assets/images/img2.jpg"
+						class="d-block w-100"
+						alt="banner-2"
+					/>
+					<div class="carousel-caption d-none d-md-block">
+						<h1>Bootstrap Template Website</h1>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur,
+							asperiores?
+						</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img
+						src="assets/images/img3.jpg"
+						class="d-block w-100"
+						alt="banner-3"
+					/>
+					<div class="carousel-caption d-none d-md-block">
+						<h1>Bootstrap Template Website</h1>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur,
+							asperiores?
+						</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img
+						src="assets/images/img1.jpg"
+						class="d-block w-100"
+						alt="banner-3"
+					/>
+					<div class="carousel-caption d-none d-md-block">
+						<h1>Bootstrap Template Website</h1>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur,
+							asperiores?
+						</p>
+					</div>
+				</div>
+			</div>
+			<button
+				class="carousel-control-prev"
+				type="button"
+				data-bs-target="#myslider"
+				data-bs-slide="prev"
+			>
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button
+				class="carousel-control-next"
+				type="button"
+				data-bs-target="#myslider"
+				data-bs-slide="next"
+			>
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+
+			<div class="carousel-indicators">
+				<button
+					type="button"
+					data-bs-target="#myslider"
+					data-bs-slide-to="0"
+					class="active"
+					aria-current="true"
+					aria-label="Slide 1"
+				></button>
+				<button
+					type="button"
+					data-bs-target="#myslider"
+					data-bs-slide-to="1"
+					aria-label="Slide 2"
+				></button>
+				<button
+					type="button"
+					data-bs-target="#myslider"
+					data-bs-slide-to="2"
+					aria-label="Slide 3"
+				></button>
+				<button
+					type="button"
+					data-bs-target="#myslider"
+					data-bs-slide-to="3"
+					aria-label="Slide 4"
+				></button>
+			</div>
+		</div>
+		<!-- banner ends -->
+
+		<!-- about section start -->
+		<section id="about">
+			<div class="container my-5">
+				<h1 class="text-center mb-5">About us</h1>
+				<div class="row">
+					<div class="col-lg-6">
+						<img class="img-fluid" src="assets/images/computer.jpg" alt="" />
+					</div>
+					<div class="col-lg-6">
+						<h2 class="text-left text-info pb">Lorem ipsum dolor sit amet</h2>
+						<p class="about-para">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+							exercitationem modi ipsum doloribus laudantium perferendis
+							similique minus a ab, fugit nam pariatur placeat expedita facere
+							antium perferendis similique minus a ab, fugit nam pariatur
+							placeat expedita facere antium perferendis similique quasi at
+							repellendus laboriosam doloremque dolorem ad porro. Exercitationem
+							obcaecati, dolore et enim
+						</p>
+						<button class="btn btn-outline-info">Read More..</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- about section ends -->
+
+		<!-- services section start -->
+		<section id="services">
+			<div class="container my-5">
+				<h1 class="text-center pt-5">Our Services</h1>
+				<div
+					class="row row-cols-1 row-cols-lg-3 row-cols-xl-4 row-cols-md-2 g-4 py-5"
+				>
+					<div class="col">
+						<div class="card h-100">
+							<img
+								src="assets/images/computer.jpg"
+								class="card-img-top"
+								alt="..."
+							/>
+							<div class="card-body">
+								<h5 class="card-title">Web Design</h5>
+								<p class="card-text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Dicta at expedita ullam perspiciatis voluptatem delectus.
+								</p>
+								<a href="#" class="link-underline-opacity-0 link-primary"
+									>Read More...</a
+								>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card h-100">
+							<img
+								src="assets/images/img4.jpg"
+								class="card-img-top"
+								alt="..."
+							/>
+							<div class="card-body">
+								<h5 class="card-title">Backend Support</h5>
+								<p class="card-text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.?
+									Illum!
+								</p>
+								<a href="#" class="link-underline-opacity-0 link-primary"
+									>Read More...</a
+								>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card h-100">
+							<img
+								src="assets/images/img3.jpg"
+								class="card-img-top"
+								alt="..."
+							/>
+							<div class="card-body">
+								<h5 class="card-title">Data Analysis</h5>
+								<p class="card-text">
+									Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+									Officia ullam vero expedita voluptatibus cum rerum?
+								</p>
+								<a href="#" class="link-underline-opacity-0 link-primary"
+									>Read More...</a
+								>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card h-100">
+							<img
+								src="assets/images/img2.jpg"
+								class="card-img-top"
+								alt="..."
+							/>
+							<div class="card-body">
+								<h5 class="card-title">Photoshop & video-edit</h5>
+								<p class="card-text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Vitae, quibusdam necessitatibus!
+								</p>
+								<a href="#" class="link-underline-opacity-0 link-primary"
+									>Read More...</a
+								>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card h-100">
+							<img
+								src="assets/images/img1.jpg"
+								class="card-img-top"
+								alt="..."
+							/>
+							<div class="card-body">
+								<h5 class="card-title">Web Scrapping</h5>
+								<p class="card-text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+									explicabo hic magni. Quasi, aspernatur laudantium?
+								</p>
+								<a href="#" class="link-underline-opacity-0 link-primary"
+									>Read More...</a
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- services section ends -->
+
+		<!-- contact section starts -->
+		<section id="contact">
+			<div class="container my-5">
+				<h1 class="text-center">Contact Us</h1>
+				<div class="row py-5">
+					<div class="col-lg-5">
+						<img class="img-fluid" src="assets/images/contact.jpg" alt="" />
+					</div>
+					<div class="col-lg-7">
+						<form class="border p-4 shadow-lg">
+							<div class="form-group pb-3">
+								<label for="full-name">Full name</label>
+								<input
+									type="text"
+									class="form-control"
+									id="full-name"
+									placeholder="Enter full name"
+								/>
+							</div>
+							<div class="form-group pb-3">
+								<label for="email">Email address</label>
+								<input
+									type="email"
+									class="form-control"
+									id="email"
+									placeholder="Enter email"
+								/>
+							</div>
+							<div class="form-group pb-3">
+								<label for="password">Password</label>
+								<input
+									type="password"
+									class="form-control"
+									id="password"
+									placeholder="Password"
+								/>
+							</div>
+							<button type="submit" class="btn btn-primary">Message us <i class="fa-regular fa-message"></i></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- contact section ends -->
+
+		<!-- footer section starts -->
+		<footer id="footer">
+			<div class="container py-5">
+				<div class="row">
+					<div class="col-12 col-md-6 col-lg-4">
+						<h4 class="footer-heading">About Us</h4>
+						<p class="ftr-para">
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint
+							explicabo architecto unde expedita dolores reiciendis.
+						</p>
+					</div>
+					<div class="col-12 col-md-6 col-lg-2">
+						<h4 class="footer-links">Quick Links</h4>
+						<ul class="ftr-quick-links">
+							<li><a href="">home</a></li>
+							<li><a href="">about</a></li>
+							<li><a href="">services</a></li>
+							<li><a href="">contact</a></li>
+						</ul>
+					</div>
+					<div class="col-12 col-md-6 col-lg-3">
+						<h4 class="footer-addrs">Address</h4>
+						<ul class="ftr-quick-links">
+							<li><i class="fa-solid fa-location-dot"></i> New Delhi, India</li>
+							<li><i class="fa-solid fa-envelope"></i> <a href="mailto:mymail@gmail.com">mymail@gmail.com</a></li>
+							<li><i class="fa-solid fa-phone"></i> <a href="tel:000-000-000">000-000-0000</a></li>
+						</ul>
+					</div>
+					<div class="col-12 col-md-6 col-lg-3">
+						<form>
+							<h4 class="ftr-subs">Subscribe to our newsletter</h4>
+							<p class="ftr-para">
+								Monthly digest of what's new and exciting from us.
+							</p>
+							<div class="d-flex flex-column flex-sm-row w-100 gap-2">
+								<label for="newsletter1" class="visually-hidden"
+									>Email address</label
+								>
+								<input
+									id="newsletter1"
+									type="email"
+									class="form-control"
+									placeholder="Email address"
+								/>
+								<button class="btn btn-primary" type="button">Subscribe</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="row pt-4 copyright">
+					<div class="col-lg-12 text-center">
+						&copy; Designed & Developed by <span class="text-info">Rohit</span>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- footer section ends -->
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>

@@ -44,16 +44,12 @@ nav {
 	height: 90vh;
 	display: flex;
 	align-items: center;
-}
-@supports (background-blend-mode: multiply) {
-	.top-section {
-		background-image: url(../images/info-img.jpg), radial-gradient(#395dcaa0, #364c60b6);
-		background-blend-mode: multiply;
-		background-attachment: fixed;
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: cover;
-	}
+	/* background-image: url("../images/info-img.jpg"); */
+	background-image: linear-gradient(rgba(0, 0, 0, 0.312), rgba(0, 0, 0, 0.099)),
+		url("../images/info-img.jpg");
+	background-size: cover;
+	background-position: center;
+	background-color: black;
 }
 .info-text {
 	margin-left: 60px;
