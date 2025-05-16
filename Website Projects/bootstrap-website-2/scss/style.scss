@@ -1,0 +1,33 @@
+@use "custom" as custom;
+
+// compile css using these custom valus in bootstrap
+@use "../node_modules/bootstrap/scss/bootstrap" with (
+  $primary: custom.$primary,
+  $secondary: custom.$secondary,
+  $accordion-icon-color: custom.$accordion-icon-color,
+  $accordion-icon-active-color: custom.$accordion-icon-active-color,
+  $accordion-button-icon: custom.$accordion-button-icon,
+  $accordion-button-active-icon: custom.$accordion-button-active-icon,
+  $accordion-padding-y: custom.$accordion-padding-y,
+  $accordion-padding-x: custom.$accordion-padding-x,
+);
+
+
+// IMPORT COMPONENTS
+
+@use "components/animations";
+@use "components/buttons";
+@use "components/mixins";
+@use "components/typography";
+
+
+// IMPORT SECTIONS
+@use "sections/navbar";
+@use "sections/intro-section";
+@use "sections/companies";
+@use "sections/services";
+@use "sections/testimonials";
+@use "sections/faq";
+@use "sections/portfolio";
+@use "sections/get-started";
+@use "sections/footer";
