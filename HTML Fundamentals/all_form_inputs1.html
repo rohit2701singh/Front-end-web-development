@@ -34,14 +34,23 @@
         <label for="bio">Bio</label>
         <textarea rows="5" cols="20" name="bio" id="bio" placeholder="write your bio here" ></textarea><br>
 
+        <!--  
+            'selected': tells the browser which option should show up as the default (pre-selected) when the page loads.
+            If you don’t put selected, the dropdown will always default to the first option.
+            'value' attribute gets sent to the backend when form submitted. note that if vlaue is present that's what gets sent to backend,
+            otherwise the text inside option will be used as value 
+        -->
         <label for="year">Year</label>
         <select name="year">
             <optgroup>
-                <option value="">First Year</option>
+                <option value="first_year">First Year</option>  
+                <!-- in above first_year will be sent to backend -->
                 <option value="">Second Year</option>
+                <!-- in above Second Year will be sent to backend -->
             </optgroup>
             <optgroup>
-                <option value="">Third Year</option>
+                <option value="" selected>Third Year</option>
+                <!-- pre-filled Third Year when page loads -->
                 <option value="">Fourth Year</option>
             </optgroup>
             

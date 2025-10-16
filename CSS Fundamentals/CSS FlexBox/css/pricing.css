@@ -51,6 +51,9 @@ h1{
     border-radius: 5px;
 
 }
+.plan-button:hover{
+    cursor: pointer;
+}
 
 @media (max-width: 900px){
     h1{
